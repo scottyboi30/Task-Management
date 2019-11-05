@@ -1,0 +1,5 @@
+<div class="mt-4">
+  <div *ngIf="tasks" class="tasks" [@listAnimation]="tasks.length">
+    <app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
+  </div>
+</div>

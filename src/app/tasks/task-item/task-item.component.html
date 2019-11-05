@@ -1,0 +1,12 @@
+<div class="card shadow task-item">
+  <div class="card-body">
+    <div class="d-flex align-items-center justify-content-between">
+      <h3 class="task-item__title">{{task.title}}</h3>
+      <span class="task-item__state">{{task.state | stateString}}</span>
+    </div>
+    <hr class="task-item__seperator">
+    <p *ngIf="task.description" class="card-text">{{task.description}}
+    </p>
+    <a class="btn-inline" [routerLink]="['edit', task.id]">Edit</a>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label for="filter">Filter</label>
+  <select class="form-control" id="filter">
+    <option *ngFor="let option of options" [value]="option.value">
+      {{option.name}}
+    </option>
+  </select>
+</div>

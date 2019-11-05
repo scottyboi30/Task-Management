@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* helpers */
+@import "variables";
+
+/* vendor */
+@import
+"~bootstrap/scss/functions",
+"~bootstrap/scss/variables",
+"~bootstrap/scss/mixins",
+"~bootstrap/scss/root",
+"~bootstrap/scss/reboot",
+"~bootstrap/scss/forms",
+"~bootstrap/scss/buttons",
+"~bootstrap/scss/custom-forms",
+"~bootstrap/scss/card",
+"~bootstrap/scss/utilities";
+
+/* base */
+@import "base";
+@import "buttons";

@@ -1,0 +1,65 @@
+@import "../../../styles/variables";
+
+.header {
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $purple;
+  color: white;
+
+  &__title {
+    cursor: pointer;
+  }
+
+  .navigation {
+    &__links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    &__item {
+      margin-right: 1rem;
+      position: relative;
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+       text-transform: uppercase;
+       text-decoration: none;
+       font-size: .7rem;
+        color: inherit;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 90%;
+          left: 5%;
+          height: 2px;
+          bottom: 0;
+          background-color: white;
+          opacity: 0;
+          transition: all .3s ease-in-out;
+          -webkit-transition: all .3s ease-in-out;
+        }
+
+        &.active {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      } 
+    }
+  }
+}

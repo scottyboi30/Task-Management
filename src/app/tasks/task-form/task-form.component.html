@@ -1,0 +1,23 @@
+<h1 class="mt-4">Task Form</h1>
+
+<form *ngIf="taskForm" class="mt-4" novalidate (ngSubmit)="saveTask()" [formGroup]="taskForm">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" formControlName="title" id="title" [ngClass]="{'is-invalid': (taskForm.get('title').touched && !taskForm.get('title').valid)
+      || (submitted && !taskForm.get('title').valid)}">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" formControlName="description" id="description" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="state">State</label>
+    <select formControlName="state" class="form-control" id="state" [ngClass]="{'is-invalid': (taskForm.get('state').touched && !taskForm.get('state').valid)
+    || (submitted && !taskForm.get('state').valid)}">
+      <option *ngFor="let option of stateOptions" [value]="option.value">
+        {{option.name}}
+      </option>
+    </select>
+  </div>
+  <button type="submit" class="btn-inline mt-3">Save</button>
+</form>

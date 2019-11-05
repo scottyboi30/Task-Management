@@ -1,0 +1,17 @@
+.btn-inline {
+  border: none;
+  color: white;
+  font-size: inherit;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: lighten($purple, 20% );
+  border-radius: 3px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $purple;
+  }
+}

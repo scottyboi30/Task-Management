@@ -1,0 +1,15 @@
+<header class="header">
+  <span class="header__title" routerLink="tasks">Task Management</span>
+  <nav class="d-flex navigation">
+    <ul class="navigation__links">
+      <li class="navigation__item">
+        <a class="navigation__link" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+          routerLink="tasks">Tasks</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+          routerLink="tasks/create">Create</a>
+      </li>
+    </ul>
+  </nav>
+</header>

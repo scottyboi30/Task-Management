@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+
+.task-item {
+  &__state {
+    font-size: .9rem;
+  }
+
+  &__seperator {
+    margin: 1rem 0;
+    border: 1px solid $purple;
+  }
+
+  &__title {
+    margin: 0;
+    word-break: break-all;
+  }
+}
